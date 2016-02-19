@@ -1,0 +1,249 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Cheap Travel\n"
+"POT-Creation-Date: 2015-10-27 15:02+0300\n"
+"PO-Revision-Date: 2015-10-27 15:02+0300\n"
+"Last-Translator: \n"
+"Language-Team: bestwebsoft.com <wp_theme@bestwebsoft.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_nx:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: footer.php:22
+msgid "Powered by"
+msgstr ""
+
+#: footer.php:24
+msgid "and"
+msgstr ""
+
+#: functions.php:36
+msgid "Top primary menu"
+msgstr ""
+
+#: functions.php:125
+msgid "Main Sidebar"
+msgstr ""
+
+#: functions.php:136
+msgid "Footer Sidebar"
+msgstr ""
+
+#: functions.php:153
+msgid "Slider Settings"
+msgstr ""
+
+#: functions.php:169
+msgid "You can add text description."
+msgstr ""
+
+#: functions.php:175
+msgid ""
+"Check if you want featured image of this post(page) to be shown in the "
+"slider."
+msgstr ""
+
+#: functions.php:182
+msgid "Featured"
+msgstr ""
+
+#: functions.php:187
+msgctxt "Used before post format."
+msgid "Format"
+msgstr ""
+
+#: functions.php:195
+msgctxt "Used before post author name."
+msgid "Author"
+msgstr ""
+
+#: functions.php:213
+msgctxt "Used before publish date."
+msgid "Posted on"
+msgstr ""
+
+#: functions.php:222
+msgctxt "Used before category names."
+msgid "Categories"
+msgstr ""
+
+#: functions.php:229
+msgctxt "Used before tag names."
+msgid "Tags"
+msgstr ""
+
+#: functions.php:238
+msgctxt "Used before full size attachment link."
+msgid "Full size"
+msgstr ""
+
+#: functions.php:246
+#, php-format
+msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#: functions.php:282
+msgid "Choose file"
+msgstr ""
+
+#: functions.php:283
+msgid "No file chosen"
+msgstr ""
+
+#: functions.php:336
+msgid "Previous"
+msgstr ""
+
+#: functions.php:340
+msgid "Next"
+msgstr ""
+
+#: functions.php:355
+msgid "Learn more"
+msgstr ""
+
+#: functions.php:362
+msgid "View"
+msgstr ""
+
+#: functions.php:386 functions.php:391
+msgid "Cheap Travel Recent Posts"
+msgstr ""
+
+#: functions.php:464
+msgid "Title"
+msgstr ""
+
+#: functions.php:468
+msgid "Number of posts to show"
+msgstr ""
+
+#: functions.php:473
+msgid "Display post date"
+msgstr ""
+
+#: index.php:36 index.php:38 archive.php:36 archive.php:38 image.php:34
+#: single.php:28 search.php:34 search.php:36
+msgid "Permalink to"
+msgstr ""
+
+#: index.php:45 image.php:53 single.php:37 page.php:29
+msgid "Pages"
+msgstr ""
+
+#: index.php:54 archive.php:46 image.php:64 single.php:46 page.php:38
+#: search.php:44
+msgid "Edit"
+msgstr ""
+
+#: index.php:59 single.php:50 search.php:49
+msgid "View more"
+msgstr ""
+
+#: index.php:63 archive.php:49 image.php:67 single.php:54 page.php:41
+#: search.php:53
+msgid "Top"
+msgstr ""
+
+#: index.php:78 archive.php:66
+msgid "Nothing Found"
+msgstr ""
+
+#: index.php:83
+msgid "Ready to publish your first post?"
+msgstr ""
+
+#: index.php:83
+msgid "Get started here"
+msgstr ""
+
+#: index.php:85 search.php:73
+msgid ""
+"Sorry, but nothing matches your search terms. Please try again using "
+"different keywords."
+msgstr ""
+
+#: index.php:88
+msgid "The page you are looking for is not found. Maybe try a search?"
+msgstr ""
+
+#: archive.php:69
+msgid ""
+"Apologies, but no results were found. Perhaps searching will help find a "
+"related post."
+msgstr ""
+
+#: comments.php:17
+#, php-format
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:31
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:32
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:33
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:37
+msgid "Comments are closed."
+msgstr ""
+
+#: searchform.php:8
+msgid "Enter to search"
+msgstr ""
+
+#: image.php:17
+msgid "Previous Image"
+msgstr ""
+
+#: image.php:20
+msgid "Next Image"
+msgstr ""
+
+#: image.php:57
+msgid "Page"
+msgstr ""
+
+#: image.php:77
+msgctxt "Parent post link"
+msgid "Published in"
+msgstr ""
+
+#: single.php:59
+msgid "Next post"
+msgstr ""
+
+#: single.php:62
+msgid "Previous post"
+msgstr ""
+
+#: 404.php:12
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:15
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: header.php:39
+msgid "Toggle navigation"
+msgstr ""
+
+#: search.php:13 search.php:69
+msgid "Search Results for"
+msgstr ""
