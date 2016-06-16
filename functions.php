@@ -7,7 +7,7 @@
  * hooks in WordPress to change core functionality.
  *
  * @subpackage Cheap Travel
- * @since Cheap Travel 1.0
+ * @since      Cheap Travel 1.0
  */
 if ( ! isset( $content_width ) ) {
 	$content_width = 640;
@@ -33,30 +33,12 @@ function cheap_travel_setup() {
 	add_image_size( 'cheap_travel_slide', 3000, 479, true );
 	/* This theme uses wp_nav_menu() in two locations. */
 	register_nav_menus( array(
-		'primary'   => __( 'Top primary menu', 'cheap-travel' ),
+		'primary' => __( 'Top primary menu', 'cheap-travel' ),
 	) );
 	/* Switch default core markup for search form, comment form, and comments to output valid HTML5. */
-	add_theme_support( 'html5',
-		array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption'
-	) );
+	add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption' ) );
 	/* Enable support for Post Formats.  See https:/*codex.wordpress.org/Post_Formats */
-	add_theme_support( 'post-formats',
-		array(
-			'aside',
-			'image',
-			'video',
-			'audio',
-			'quote',
-			'link',
-			'gallery',
-			'chat',
-			'status'
-	) );
+	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'audio', 'quote', 'link', 'gallery', 'chat', 'status' ) );
 	/* This theme allows users to set a custom header. */
 	$custom_header = array(
 		'default-image'          => '',
@@ -79,14 +61,13 @@ function cheap_travel_setup() {
 		'default-image'          => '',
 		'wp-head-callback'       => '_custom_background_cb',
 		'admin-head-callback'    => '',
-		'admin-preview-callback' => ''
+		'admin-preview-callback' => '',
 	);
 	add_theme_support( 'custom-background', $defaults );
 	/* Add support for featured content. */
-	add_theme_support( 'featured-content',
-		array(
-			'featured_content_filter' 	=> 'cheap_travel_get_featured_posts',
-			'max_posts' 				=> 6,
+	add_theme_support( 'featured-content', array(
+		'featured_content_filter' => 'cheap_travel_get_featured_posts',
+		'max_posts'               => 6,
 	) );
 	/* This theme uses its own gallery styles. */
 	add_filter( 'use_default_gallery_style', '__return_false' );
@@ -94,26 +75,28 @@ function cheap_travel_setup() {
 
 /* Changing styles header */
 function cheap_travel_header_style() {
-	$text_color = get_header_textcolor();
+	$text_color   = get_header_textcolor();
 	$display_text = display_header_text();
 	$header_image = get_header_image(); ?>
 	<style type="text/css">
-	<?php if ( 'blank' != $text_color ) { ?> /*If the user has set a custom color for the text use that */
-		#cheap_travel_masthead .cheap-travel-home-link h1.cheap-travel-site-title,
-		#cheap_travel_site_navigation div ul a {
-			color: #<?php echo $text_color; ?> !important;
+		<?php if ( 'blank' != $text_color ) { ?> /*If the user has set a custom color for the text use that */
+			#cheap_travel_masthead .cheap-travel-home-link h1.cheap-travel-site-title,
+			#cheap_travel_site_navigation div ul a {
+				color: <?php echo '#' . $text_color; ?> !important;
+			}
+		<?php }
+
+		if ( ! $display_text ) { ?> /* Display text or not */
+			.cheap-travel-site-title,
+			.cheap-travel-site-description {
+				display: none;
+			}
+		<?php } ?>
+
+		#cheap_travel_masthead {
+			background: #ffffff url('<?php echo $header_image; ?>') no-repeat center center;
+			background-size: cover;
 		}
-	<?php }
-	if( ! $display_text ) { ?> /* Display text or not */
-		.cheap-travel-site-title,
-		.cheap-travel-site-description {
-			display: none;
-		}
-	<?php } ?>
-	#cheap_travel_masthead {
-		background: #ffffff url( '<?php echo $header_image; ?>' ) no-repeat center center;
-		background-size: cover;
-	}
 	</style>
 <?php }
 
@@ -122,23 +105,23 @@ function cheap_travel_register_sidebar() {
 	/* Right sidebar */
 	register_sidebar(
 		array(
-			'name' 			=> __( 'Main Sidebar', 'cheap-travel' ),
-			'id' 			=> 'cheap_travel_left_sidebar',
+			'name'          => __( 'Main Sidebar', 'cheap-travel' ),
+			'id'            => 'cheap_travel_left_sidebar',
 			'before_widget' => '<aside class="cheap-travel-widget-left-sidebar col-lg-12 col-md-6 col-sm-6">',
-			'after_widget' 	=> '</aside>',
-			'before_title' 	=> '<h3 class="cheap-travel-widget-title">',
-			'after_title' 	=> '</h3>',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h3 class="cheap-travel-widget-title">',
+			'after_title'   => '</h3>',
 		)
 	);
 	/* Footer sidebar */
 	register_sidebar(
 		array(
-			'name' 			=> __( 'Footer Sidebar', 'cheap-travel' ),
-			'id' 			=> 'cheap_travel_footer_sidebar',
+			'name'          => __( 'Footer Sidebar', 'cheap-travel' ),
+			'id'            => 'cheap_travel_footer_sidebar',
 			'before_widget' => '<aside class="cheap-travel-widget-footer-sidebar col-sm-4 col-xs-6">',
-			'after_widget' 	=> '</aside>',
-			'before_title' 	=> '<h2 class="cheap-travel-widget-footer-title">',
-			'after_title' 	=> '</h2>',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h2 class="cheap-travel-widget-footer-title">',
+			'after_title'   => '</h2>',
 		)
 	);
 	register_widget( 'Cheap_Travel_Recent_Posts_Widget' );
@@ -163,9 +146,9 @@ function cheap_travel_slider_custom_box( $post ) {
 	wp_nonce_field( 'cheap_travel_slider_custom_box', 'cheap_travel_slider_custom_box_nonce' );
 	/* Use get_post_meta() to retrieve an existing value
 	from the database and use the value for the form. */
-	$edited_post_ID = $post->ID;
-	$value = get_post_meta( $edited_post_ID, 'cheap_travel_add_to_slider', true ); ?>
-	<input type="checkbox" id="cheap_travel_add_to_slider" name="cheap_travel_add_to_slider"<?php if ( $value == 'on' ) echo 'checked ';?>>
+	$edited_post_id = $post->ID;
+	$value          = get_post_meta( $edited_post_id, 'cheap_travel_add_to_slider', true ); ?>
+	<input type="checkbox" id="cheap_travel_add_to_slider" name="cheap_travel_add_to_slider" value="1" <?php if ( true == $value ) { echo 'checked '; } ?>>
 	<label for="cheap_travel_add_to_slider">
 		<?php _e( 'Check if you want featured image of this post(page) to be shown in the slider.', 'cheap-travel' ) ?><br>
 	</label>
@@ -246,35 +229,38 @@ function cheap_travel_entry_meta() {
 /* When the post is saved, saves our custom data. */
 function cheap_travel_slider_save_postdata( $post_id ) {
 	/* We need to verify this came from the our screen and with proper authorization, because save_post can be triggered at other times. Check if our nonce is set.*/
-	if ( ! isset( $_POST[ 'cheap_travel_slider_custom_box_nonce' ] ) )
+	if ( ! isset( $_POST['cheap_travel_slider_custom_box_nonce'] ) ) {
 		return $post_id;
+	}
 	/* If this is an autosave, our form has not been submitted, so we don't want to do anything. */
-	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
+	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 		return $post_id;
+	}
 	/* OK, its safe for us to save the data now.
 	Update the meta field in the database. */
-	update_post_meta( $post_id, 'cheap_travel_add_to_slider', $_POST[ 'cheap_travel_add_to_slider' ] );
+	update_post_meta( $post_id, 'cheap_travel_add_to_slider', isset( $_POST['cheap_travel_add_to_slider'] ) ? true : false );
 }
 
 /* Proper way to enqueue scripts and styles */
 function cheap_travel_style_scripts() {
-	 /* Adds JavaScript to pages with the comment form to support sites with threaded comments (when in use). */
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
+	/* Adds JavaScript to pages with the comment form to support sites with threaded comments (when in use). */
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
+	}
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.css' ); /* including css for  bootstrap*/
 	wp_enqueue_style( 'formstyler', get_template_directory_uri() . '/css/jquery.formstyler.css' ); /* including css for Loads library for styling the form elements. */
 	/* Add Genericons, used in the main stylesheet. */
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.2' );
 	wp_enqueue_style( 'cheap_travel_styles', get_stylesheet_uri() ); /* including main style css  */
-	wp_enqueue_script( 'cheap_travel_scripts', get_template_directory_uri() . '/js/scripts.js', array( "jquery" ) ); /* including main Scripts js  */
+	wp_enqueue_script( 'cheap_travel_scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ) ); /* including main Scripts js  */
 	wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/js/html5shiv.js' );/* including scripts for compatibility html5 with IE */
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.js' );
 	/* including scripts for  bootstrap*/
-	wp_enqueue_script( 'formstyler', get_template_directory_uri() . '/js/jquery.formstyler.js',	array( 'jquery' ) );/* including scripts for Loads library for styling the form elements. */
+	wp_enqueue_script( 'formstyler', get_template_directory_uri() . '/js/jquery.formstyler.js', array( 'jquery' ) );/* including scripts for Loads library for styling the form elements. */
 	$script_localization = array( /* array with elements to localize in scripts */
-		'choose_file'			=> __( 'Choose file', 'cheap-travel' ),
-		'file_is_not_selected'	=> __( 'No file chosen', 'cheap-travel' ),
-		'cheap_travel_home_url'		=> esc_url( home_url() ),
+		'choose_file'           => __( 'Choose file', 'cheap-travel' ),
+		'file_is_not_selected'  => __( 'No file chosen', 'cheap-travel' ),
+		'cheap_travel_home_url' => esc_url( home_url() ),
 	);
 	wp_localize_script( 'cheap_travel_scripts', 'script_loc', $script_localization ); /* localization in scripts */
 }
@@ -284,11 +270,11 @@ function cheap_travel_carousel_slider() {
 	if ( have_posts() ) {
 		$query = new WP_Query(
 			array(
-				'posts_per_page'				=> -1,
-				'post_type'						=> 'any',
-				'meta_key'						=> 'cheap_travel_add_to_slider',
-				'meta_value'					=> 'on',
-				'ignore_sticky_posts' 			=> 1
+				'posts_per_page'      => - 1,
+				'post_type'           => 'any',
+				'meta_key'            => 'cheap_travel_add_to_slider',
+				'meta_value'          => true,
+				'ignore_sticky_posts' => 1,
 			)
 		);
 		/* The Loop */
@@ -297,9 +283,9 @@ function cheap_travel_carousel_slider() {
 				<!-- Indicators -->
 				<ol class="carousel-indicators">
 					<?php $i = 0;
-					while( $i < $query->post_count ) { ?>
-						<li data-target="#carousel-example-generic" data-slide-to="<?php echo $i; ?>" class="<?php if ( $i == 0 ) echo 'active'; ?>"></li>
-					<?php $i++;
+					while ( $i < $query->post_count ) { ?>
+						<li data-target="#carousel-example-generic" data-slide-to="<?php echo $i; ?>" class="<?php if ( 0 == $i ) { echo 'active'; } ?>"></li>
+						<?php $i ++;
 					} ?>
 				</ol>
 				<!-- Wrapper for slides -->
@@ -308,7 +294,7 @@ function cheap_travel_carousel_slider() {
 					add_filter( 'excerpt_more', 'cheap_travel_excerpt_slider_more' );
 					while ( $query->have_posts() ) {
 						$query->the_post(); ?>
-						<div class="item<?php if ( ! empty( $query->current_post ) == 0 ) echo ' active' ?>">
+						<div class="item<?php if ( ! empty( $query->current_post ) == 0 ) { echo ' active'; } ?>">
 							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'cheap_travel_slide' ); ?></a>
 							<div class="carousel-caption">
 								<h1><?php the_title(); ?></h1>
@@ -332,7 +318,7 @@ function cheap_travel_carousel_slider() {
 					<span class="sr-only"><?php _e( 'Next', 'cheap-travel' ); ?></span>
 				</a>
 			</div>
-	<?php }
+		<?php }
 	}
 } /* END slider */
 
@@ -342,14 +328,14 @@ function cheap_travel_slider_excerpt_length( $length ) {
 }
 
 if ( ! is_admin() ) {
-/*  Replaces "[...]" (appended to automatically generated excerpts) with ... and a 'View more' link. string 'Continue reading' link prepended with an ellipsis. */
+	/*  Replaces "[...]" (appended to automatically generated excerpts) with ... and a 'View more' link. string 'Continue reading' link prepended with an ellipsis. */
 	function cheap_travel_excerpt_slider_more( $more ) {
 		return ' <a class="cheap-travel-slider-more" href="' . get_permalink( get_the_ID() ) . '">' . __( 'Learn more', 'cheap-travel' ) . '&nbsp;<span class="genericon genericon-next"></span></a>';
 	}
 }
 
 if ( ! is_admin() ) {
-/* Replaces "[...]" (appended to automatically generated excerpts) with ... and a 'View more' link. return string 'Continue reading' link prepended with an ellipsis. */
+	/* Replaces "[...]" (appended to automatically generated excerpts) with ... and a 'View more' link. return string 'Continue reading' link prepended with an ellipsis. */
 	function cheap_travel_excerpt_more( $more ) {
 		return ' <a class="cheap-travel-read-more" href="' . get_permalink( get_the_ID() ) . '">' . __( 'View', 'cheap-travel' ) . '&nbsp;&#062; </a>';
 	}
@@ -372,23 +358,26 @@ function cheap_travel_post_thumbnail() {
 }
 
 /* Create a custom widget Cheap Travel Recent Posts */
+
 class Cheap_Travel_Recent_Posts_Widget extends WP_Widget {
 	function __construct() {
 		/* Instantiate the parent object */
 		parent::__construct( false, __( 'Cheap Travel Recent Posts', 'cheap-travel' ) );
 	}
+
 	function widget( $args, $instance ) {
 		/* Widget output */
-		extract( $args );
-		$title = ( ! empty( $instance[ 'title' ] ) ) ? $instance[ 'title' ] : __( 'Cheap Travel Recent Posts', 'cheap-travel' );
+		$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : __( 'Cheap Travel Recent Posts', 'cheap-travel' );
 		$title = apply_filters( 'widget_title', $title );
-		echo $before_widget;
-		if ( $title )
-			echo $before_title . $title . $after_title;
-		$number = ( ! empty( $instance[ 'number' ] ) ) ? absint( $instance[ 'number' ] ) : 5;
-		if ( ! $number )
+		echo $args['before_widget'];
+		if ( $title ) {
+			echo $args['before_title'] . $title . $args['after_title'];
+		}
+		$number = ( ! empty( $instance['number'] ) ) ? absint( $instance['number'] ) : 5;
+		if ( ! $number ) {
 			$number = 5;
-		$show_date = isset( $instance[ 'show_date' ] ) ? $instance[ 'show_date' ] : false;
+		}
+		$show_date    = isset( $instance['show_date'] ) ? $instance['show_date'] : false;
 		$widget_query = new WP_Query(
 			apply_filters(
 				'widget_posts_args',
@@ -396,7 +385,7 @@ class Cheap_Travel_Recent_Posts_Widget extends WP_Widget {
 					'posts_per_page'      => $number,
 					'no_found_rows'       => true,
 					'post_status'         => 'publish',
-					'ignore_sticky_posts' => true
+					'ignore_sticky_posts' => true,
 				)
 			)
 		);
@@ -423,38 +412,41 @@ class Cheap_Travel_Recent_Posts_Widget extends WP_Widget {
 					</li> <!-- .cheap-travel-custom-widget-li -->
 				<?php } ?>
 			</ul> <!-- .cheap-travel-custom-widget-ul -->
-			<?php echo $args[ 'after_widget' ];
+			<?php echo $args['after_widget'];
 			remove_filter( 'excerpt_length', 'cheap_travel_widget_excerpt_length' );
 			/* Reset the global $the_post as this query will have stomped on it */
 			wp_reset_postdata();
 		}
-		echo $after_widget;
+		echo $args['after_widget'];
 	}
+
 	function update( $new_instance, $old_instance ) {
 		/* Save widget options */
-		$instance 					= $old_instance;
-		$instance[ 'title' ] 		= strip_tags( $new_instance[ 'title' ] );
-		$instance[ 'number' ] 		= ( int ) $new_instance[ 'number' ];
-		$instance[ 'show_date' ] 	= isset( $new_instance[ 'show_date' ] ) ? ( bool ) $new_instance[ 'show_date' ] : false;
+		$instance              = $old_instance;
+		$instance['title']     = strip_tags( $new_instance['title'] );
+		$instance['number']    = (int) $new_instance['number'];
+		$instance['show_date'] = isset( $new_instance['show_date'] ) ? (bool) $new_instance['show_date'] : false;
 		wp_cache_delete( 'Cheap_Travel_Recent_Posts_Widget', 'widget' );
 
 		$alloptions = wp_cache_get( 'alloptions', 'options' );
-		if ( isset( $alloptions[ 'Cheap_Travel_Recent_Posts_Widget' ] ) )
+		if ( isset( $alloptions['Cheap_Travel_Recent_Posts_Widget'] ) ) {
 			delete_option( 'Cheap_Travel_Recent_Posts_Widget' );
+		}
 
 		return $instance;
 	}
+
 	function form( $instance ) {
 		/* Output admin widget options form */
-		$title     	= isset( $instance[ 'title' ] ) ? esc_attr( $instance[ 'title' ] ) : '';
-		$number     = isset( $instance[ 'number' ] ) ? absint( $instance[ 'number' ] ) : 5;
-		$show_date 	= isset( $instance[ 'show_date' ] ) ? ( bool ) $instance[ 'show_date' ] : false; ?>
+		$title     = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
+		$number    = isset( $instance['number'] ) ? absint( $instance['number'] ) : 5;
+		$show_date = isset( $instance['show_date'] ) ? (bool) $instance['show_date'] : false; ?>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php echo __( 'Title', 'cheap-travel' ) . ':'; ?></label>
 			<input id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" />
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php echo __( 'Number of posts to show', 'cheap-travel'  ) . ':'; ?></label>
+			<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php echo __( 'Number of posts to show', 'cheap-travel' ) . ':'; ?></label>
 			<input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $number; ?>" size="3" />
 		</p>
 		<p>
@@ -477,4 +469,3 @@ add_action( 'wp_enqueue_scripts', 'cheap_travel_style_scripts' );
 add_action( 'cheap_travel_carousel_slider', 'cheap_travel_carousel_slider' );
 add_filter( 'excerpt_more', 'cheap_travel_excerpt_more' );
 add_action( 'cheap_travel_post_thumbnail', 'cheap_travel_post_thumbnail' );
-?>

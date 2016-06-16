@@ -7,7 +7,7 @@
  * other "pages" on your WordPress site will use a different template.
  *
  * @subpackage Cheap Travel
- * @since Cheap Travel 1.0
+ * @since      Cheap Travel 1.0
  */
 get_header(); ?>
 	<section class="cheap-travel-contents col-lg-8 col-md-12">
@@ -24,14 +24,12 @@ get_header(); ?>
 				</header><!-- END .cheap-travel-page-header -->
 				<div id="cheap-travel-article-content" class="cheap-travel-content">
 					<?php the_content();
-					wp_link_pages(
-						array(
-							'before' 		=> '<div class="page-links"><span class="page-links-title">' . __( 'Pages', 'cheap-travel' ) . ':</span>',
-							'after' 		=> '</div>',
-							'link_before' 	=> '<span>&nbsp;',
-							'link_after' 	=> '&nbsp;</span>'
-							)
-						); ?>
+					wp_link_pages( array(
+						'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages', 'cheap-travel' ) . ':</span>',
+						'after'       => '</div>',
+						'link_before' => '<span>&nbsp;',
+						'link_after'  => '&nbsp;</span>',
+					) ); ?>
 					<div class="cheap-travel-clear"></div>
 					<footer class="cheap-travel-tags cheap-travel-page-tags">
 						<?php cheap_travel_entry_meta();
@@ -47,4 +45,4 @@ get_header(); ?>
 		<?php } ?>
 	</section> <!-- END .cheap-travel-contents -->
 <?php get_sidebar();
-get_footer(); ?>
+get_footer();

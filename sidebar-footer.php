@@ -3,7 +3,7 @@
  * The Footer Sidebar
  *
  * @subpackage Cheap Travel
- * @since Cheap Travel 1.0
+ * @since      Cheap Travel 1.0
  */
 if ( ! is_active_sidebar( 'cheap_travel_footer_sidebar' ) ) {
 	return;

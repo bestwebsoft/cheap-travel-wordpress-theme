@@ -3,7 +3,7 @@
  * The template for displaying 404 pages (not found)
  *
  * @subpackage Cheap Travel
- * @since Cheap Travel 1.0
+ * @since      Cheap Travel 1.0
  */
 get_header(); ?>
 	<section class="cheap-travel-contents col-lg-8 col-md-12">
@@ -18,4 +18,4 @@ get_header(); ?>
 		</article> <!-- END .error-404 -->
 	</section> <!-- END .cheap-travel-contents -->
 <?php get_sidebar();
-get_footer(); ?>
+get_footer();

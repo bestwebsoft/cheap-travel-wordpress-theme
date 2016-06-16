@@ -1,17 +1,19 @@
 === Cheap Travel ===
-Contributors: the BestWebSoft team
-Tags: white, gray, blue, light, fluid-layout, left-sidebar, threaded-comments, sticky-post, custom-header, post-formats, translation-ready, featured-images, editor-style
+Contributors: BestWebLayout, BestWebSoft
+Author URI: http://bestweblayout.com/
+https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
+Tags: two-columns, left-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, footer-widgets, post-formats, sticky-post, threaded-comments, translation-ready
 Requires at least: 4.1
-Tested up to: 4.4.2
-Stable tag: 1.4
+Tested up to: 4.5.2
+Stable tag: 1.8
 License: GNU General Public License V3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Cheap Travel WordPress Theme, Copyright 2015 BestWebSoft.com
-Cheap Travel is distributed under the terms of the GNU GPL
+Cheap Travel WordPress Theme, Copyright 2015 BestWebLayout.org
+Theme Cheap Travel is distributed under the terms of the GNU GPL
 
 == Description ==
 
-Are you looking for an ideal theme for your travel notes? Cheap Travel - is exactly what you need! This theme has fresh, airy design, styled in soft blue, white and gray tones. It is incredibly easy to use, considering the fact that it has a lot of great features. This theme  will be useful for cheap-travels, travel blogs, travel guides, photography, souvenir shops, and many more. Be sure - you will enjoy it! Live demo at http://bestwebsoft.com/WordPress_demo_theme/cheap-travel/
+Are you looking for an ideal theme for your travel notes? Cheap Travel - is exactly what you need! This theme has fresh, airy design, styled in soft blue, white and gray tones. It is incredibly easy to use, considering the fact that it has a lot of great features. This theme  will be useful for cheap-travels, travel blogs, travel guides, photography, souvenir shops, and many more. Be sure - you will enjoy it! Live demo at http://wp-demo-theme.bestweblayout.com/cheap-travel/
 
 = Features =
 
@@ -29,7 +31,7 @@ Are you looking for an ideal theme for your travel notes? Cheap Travel - is exac
 
 * Russian (ru_RU)
 
-If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.WordPress.org/Translating_WordPress" target="_blank">the text of PO and MO files</a> to <a href="http://support.bestwebsoft.com" target="_blank">BestWebSoft</a>, and we'll add it to the plugin. You can download the latest version of the program for working with PO and MO files  <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
+If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text of PO and MO files</a> to <a href="http://support.bestweblayout.com" target="_blank">BestWebLayout</a>, and we'll add it to the plugin. You can download the latest version of the program for working with PO and MO files  <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
 
 = Copyrights for Resources used in this theme =
 
@@ -83,7 +85,7 @@ Everything else used in this theme has been created by BestWebSoft, specifically
 
 Manual installation:
 
-1. Upload the "Cheap Travel" folder to “/wp-content/themes/” directory.
+1. Upload the "Cheap Travel" folder to "/wp-content/themes/" directory.
 
 Installation using "Add New Theme"
 
@@ -138,8 +140,24 @@ Change the language in the admin settings screen. Settings > General > Site Lang
 
 == Changelog ==
 
+= V1.8 - 16.06.2016 =
+* Bugfix: Fixed mismatch coding standards.
+* Update: Translation was updated.
+* Update: The theme has been tested for the compatibility with WordPress v.4.5.2.
+* Update: Theme was transferred to new WordPress account.
+
+= V1.7 - 24.03.2016 =
+* Update: Theme URI and Author URI has been changed.
+
+= V1.6 - 23.02.2016 =
+* Bugfix: Link to Live demo preview was fixed.
+
+= V1.5 - 18.02.2016 =
+* Update: Slider functionality has been optimized
+* Update: Theme URI has been changed to Git
+
 = V1.4 - 17.02.2016 =
-* New : "editor-style.css" file has been added
+* New: "editor-style.css" file has been added
 * Update: Slider functionality has been updated
 * Bugfix: Theme prefix for connecting third-party scripts has been removed
 * New: Licenses for PT Sans font, Genericons, Images in the screenshot have been added
@@ -160,6 +178,18 @@ Change the language in the admin settings screen. Settings > General > Site Lang
 
 == Upgrade Notice ==
 
+= V1.8 =
+Fixed mismatch coding standards. Translation was updated. The theme has been tested for the compatibility with WordPress v.4.5.2. Theme was transferred to new WordPress account.
+
+= V1.7 =
+Theme URI and Author URI has been changed.
+
+= V1.6 =
+Link to Live demo preview was fixed.
+
+= V1.5 =
+Slider functionality has been optimized. Theme URI has been changed to Git.
+
 = V1.4 =
 "editor-style.css" file has been added. Slider functionality has been updated. Theme prefix for connecting third-party scripts has been removed. Licenses for PT Sans font, Genericons, Images in the screenshot have been added. Third-party scripts files for css3-mediaqueries.js, html5 have been replaced.
 
@@ -174,4 +204,3 @@ Added site description. The following files were updated: style.css, header.php,
 
 = V1.0 =
 Ability to use the theme in your site.
-
