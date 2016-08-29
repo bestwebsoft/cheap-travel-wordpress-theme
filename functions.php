@@ -251,18 +251,21 @@ function cheap_travel_style_scripts() {
 	wp_enqueue_style( 'formstyler', get_template_directory_uri() . '/css/jquery.formstyler.css' ); /* including css for Loads library for styling the form elements. */
 	/* Add Genericons, used in the main stylesheet. */
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.2' );
-	wp_enqueue_style( 'cheap_travel_styles', get_stylesheet_uri() ); /* including main style css  */
-	wp_enqueue_script( 'cheap_travel_scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ) ); /* including main Scripts js  */
-	wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/js/html5shiv.js' );/* including scripts for compatibility html5 with IE */
+	wp_enqueue_style( 'cheap-travel-styles', get_stylesheet_uri() ); /* including main style css  */
+	wp_enqueue_script( 'cheap-travel-scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ) ); /* including main Scripts js  */
+	wp_enqueue_script( 'cheap-travel-html5shiv', get_template_directory_uri() . '/js/html5shiv.js' ); /* including scripts for compatibility html5 with IE */
+	wp_script_add_data( 'cheap-travel-html5shiv', 'conditional', 'lt IE 9' );
+	wp_enqueue_script( 'cheap-travel-css3', get_template_directory_uri() . '/js/css3-mediaqueries.js' ); /* including scripts for compatibility html5 with IE */
+	wp_script_add_data( 'cheap-travel-css3', 'conditional', 'lt IE 9' );
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.js' );
 	/* including scripts for  bootstrap*/
-	wp_enqueue_script( 'formstyler', get_template_directory_uri() . '/js/jquery.formstyler.js', array( 'jquery' ) );/* including scripts for Loads library for styling the form elements. */
+	wp_enqueue_script( 'jquery-formstyler', get_template_directory_uri() . '/js/jquery.formstyler.js', array( 'jquery' ) ); /* including scripts for Loads library for styling the form elements. */
 	$script_localization = array( /* array with elements to localize in scripts */
 		'choose_file'           => __( 'Choose file', 'cheap-travel' ),
 		'file_is_not_selected'  => __( 'No file chosen', 'cheap-travel' ),
 		'cheap_travel_home_url' => esc_url( home_url() ),
 	);
-	wp_localize_script( 'cheap_travel_scripts', 'script_loc', $script_localization ); /* localization in scripts */
+	wp_localize_script( 'cheap-travel-scripts', 'script_loc', $script_localization ); /* localization in scripts */
 }
 
 /* Adds slider to the frontpage */

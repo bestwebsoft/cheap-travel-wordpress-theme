@@ -21,9 +21,9 @@
 							bloginfo( 'name' ); ?></label>
 						<label class="cheap-travel-logo-info">
 							<?php _e( 'Powered by', 'cheap-travel' ); ?>&nbsp;
-							<a href="<?php echo esc_url( wp_get_theme()->get( 'AuthorURI' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'cheap-travel' ); ?>" target="_blank">BestWebLayout</a>
+							<a href="<?php echo esc_url( wp_get_theme()->get( 'AuthorURI' ) ); ?>" target="_blank">BestWebLayout</a>
 							<?php _e( 'and', 'cheap-travel' ); ?>&nbsp;
-							<a href="<?php echo esc_url( 'http://wordpress.org/' ); ?>" target="_blank">WordPress</a>
+							<a href="http://wordpress.org/" target="_blank">WordPress</a>
 						</label>
 					</p>
 				</div> <!-- END .cheap-travel-site-info -->

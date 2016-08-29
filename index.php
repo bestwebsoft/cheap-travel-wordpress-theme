@@ -35,11 +35,13 @@ get_header(); ?>
 							} ?>
 							<h3 class="cheap-travel-title">
 								<a href="<?php echo $linkurl; ?>" target="_blank" rel="bookmark" title="<?php echo __( 'Permalink to', 'cheap-travel' ) . '&nbsp;';
-								the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+								the_title_attribute(); ?>"><?php the_title(); ?></a>
+							</h3>
 						<?php } else { ?>
 							<h3 class="cheap-travel-title">
 								<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php echo __( 'Permalink to', 'cheap-travel' ) . '&nbsp;';
-								the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+								the_title_attribute(); ?>"><?php the_title(); ?></a>
+							</h3>
 						<?php } ?>
 					</header><!-- END .cheap-travel-page-header -->
 					<div id="cheap-travel-article-content" class="cheap-travel-content">

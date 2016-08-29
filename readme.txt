@@ -1,11 +1,11 @@
 === Cheap Travel ===
 Contributors: BestWebLayout, BestWebSoft
 Author URI: http://bestweblayout.com/
-https://www.2checkout.com/checkout/purchase?sid=1430388&quantity=10&product_id=13
+Donate link: http://bestwebsoft.com/donate/
 Tags: two-columns, left-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, footer-widgets, post-formats, sticky-post, threaded-comments, translation-ready
-Requires at least: 4.1
-Tested up to: 4.5.2
-Stable tag: 1.8
+Requires at least: 4.2
+Tested up to: 4.6
+Stable tag: 1.9
 License: GNU General Public License V3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Cheap Travel WordPress Theme, Copyright 2015 BestWebLayout.org
@@ -140,6 +140,13 @@ Change the language in the admin settings screen. Settings > General > Site Lang
 
 == Changelog ==
 
+= V1.9 - 29.08.2016 =
+* Update : The script handle 'formstyler' was prefixed with jquery.
+* Update : All scripts have been enqueued.
+* Update : Escaped hardcoded data "esc_url( 'http://wordpress.org/' )" was fixed.
+* Update : The pot file name was updated.
+* Update : All functionality for WordPress 4.6 was updated.
+
 = V1.8 - 16.06.2016 =
 * Bugfix: Fixed mismatch coding standards.
 * Update: Translation was updated.
@@ -177,6 +184,9 @@ Change the language in the admin settings screen. Settings > General > Site Lang
 * NEW: Ability to use the theme in your site.
 
 == Upgrade Notice ==
+
+= V1.9 =
+The script handle 'formstyler' was prefixed with jquery. All scripts have been enqueued. Escaped hardcoded data "esc_url( 'http://wordpress.org/' )" was fixed. The pot file name was updated. The compatibility with new WordPress version updated.
 
 = V1.8 =
 Fixed mismatch coding standards. Translation was updated. The theme has been tested for the compatibility with WordPress v.4.5.2. Theme was transferred to new WordPress account.

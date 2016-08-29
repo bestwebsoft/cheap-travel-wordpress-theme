@@ -1,20 +1,24 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Cheap Travel\n"
-"POT-Creation-Date: 2016-06-16 12:21+0300\n"
-"PO-Revision-Date: 2016-06-16 12:28+0300\n"
+"Project-Id-Version: Cheap Travel v1.9\n"
+"Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
+"POT-Creation-Date: 2016-08-29 10:51+0300\n"
+"PO-Revision-Date: \n"
 "Last-Translator: \n"
-"Language-Team: bestwebsoft.com <wp_theme@bestwebsoft.com>\n"
+"Language-Team: BestWebSoft <wp_theme@bestwebsoft.com>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.4\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_nx:1,2\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Textdomain-Support: yesX-Generator: Poedit 1.6.4\n"
 "X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;"
+"_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
 "X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: 404.php:12
@@ -25,26 +29,26 @@ msgstr "Опаньки!  Страница не найдена."
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr "Страница, которую вы ищете, не найдена. Может быть, попробовать поиск?"
 
-#: archive.php:37 archive.php:41 image.php:35 index.php:37 index.php:41
-#: search.php:35 search.php:39 single.php:29
+#: archive.php:37 archive.php:42 image.php:35 index.php:37 index.php:42
+#: search.php:35 search.php:40 single.php:29
 msgid "Permalink to"
 msgstr "Ссылка на"
 
-#: archive.php:50 image.php:66 index.php:56 page.php:36 search.php:48
-#: single.php:46
+#: archive.php:52 image.php:67 index.php:58 page.php:36 search.php:50
+#: single.php:47
 msgid "Edit"
 msgstr "Редактировать"
 
-#: archive.php:53 image.php:69 index.php:66 page.php:39 search.php:58
-#: single.php:56
+#: archive.php:55 image.php:70 index.php:68 page.php:39 search.php:60
+#: single.php:57
 msgid "Top"
 msgstr "Наверх"
 
-#: archive.php:70 index.php:81
+#: archive.php:72 index.php:83
 msgid "Nothing Found"
 msgstr "Ничего не найдено"
 
-#: archive.php:73
+#: archive.php:75
 msgid ""
 "Apologies, but no results were found. Perhaps searching will help find a "
 "related post."
@@ -146,47 +150,47 @@ msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 "Добавить комментарий<span class=\"screen-reader-text\"> к записи %s</span>"
 
-#: functions.php:261
+#: functions.php:264
 msgid "Choose file"
 msgstr "Выберите файл"
 
-#: functions.php:262
+#: functions.php:265
 msgid "No file chosen"
 msgstr "Файл не выбран"
 
-#: functions.php:314
+#: functions.php:317
 msgid "Previous"
 msgstr "Предыдущий"
 
-#: functions.php:318
+#: functions.php:321
 msgid "Next"
 msgstr "Следующий"
 
-#: functions.php:333
+#: functions.php:336
 msgid "Learn more"
 msgstr "Узнать больше"
 
-#: functions.php:340
+#: functions.php:343
 msgid "View"
 msgstr "Смотреть"
 
-#: functions.php:365 functions.php:370
+#: functions.php:368 functions.php:373
 msgid "Cheap Travel Recent Posts"
 msgstr "Cheap Travel Свежие записи"
 
-#: functions.php:445
+#: functions.php:448
 msgid "Title"
 msgstr "Заголовок"
 
-#: functions.php:449
+#: functions.php:452
 msgid "Number of posts to show"
 msgstr "Количество показываемых сообщений"
 
-#: functions.php:454
+#: functions.php:457
 msgid "Display post date"
 msgstr "Показать дату публикации"
 
-#: header.php:39
+#: header.php:35
 msgid "Toggle navigation"
 msgstr "Переключение навигации"
 
@@ -198,32 +202,32 @@ msgstr "Предыдущее изображение"
 msgid "Next Image"
 msgstr "Следующее изображение"
 
-#: image.php:55 index.php:48 page.php:28 single.php:38
+#: image.php:56 index.php:50 page.php:28 single.php:39
 msgid "Pages"
 msgstr "Страницы"
 
-#: image.php:59
+#: image.php:60
 msgid "Page"
 msgstr "Страница"
 
-#: image.php:79
+#: image.php:80
 msgctxt "Parent post link"
 msgid "Published in"
 msgstr "Автор"
 
-#: index.php:61 search.php:53 single.php:51
+#: index.php:63 search.php:55 single.php:52
 msgid "View more"
 msgstr "Смотреть больше"
 
-#: index.php:86
+#: index.php:88
 msgid "Ready to publish your first post?"
 msgstr "Готовы опубликовать свой первый пост?"
 
-#: index.php:86
+#: index.php:88
 msgid "Get started here"
 msgstr "Начните отсюда"
 
-#: index.php:88 search.php:78
+#: index.php:90 search.php:80
 msgid ""
 "Sorry, but nothing matches your search terms. Please try again using "
 "different keywords."
@@ -231,11 +235,11 @@ msgstr ""
 "Извините, по вашему запросу ничего не найдено. Попробуйте другие ключевые "
 "слова."
 
-#: index.php:91
+#: index.php:93
 msgid "The page you are looking for is not found. Maybe try a search?"
 msgstr "Страница, которую вы ищете, не найден. Может быть, попробовать поиск?"
 
-#: search.php:13 search.php:74
+#: search.php:13 search.php:76
 msgid "Search Results for"
 msgstr "Результаты поиска для"
 
@@ -243,11 +247,11 @@ msgstr "Результаты поиска для"
 msgid "Enter to search"
 msgstr "Введите для поиска"
 
-#: single.php:61
+#: single.php:62
 msgid "Next post"
 msgstr "Следующая запись"
 
-#: single.php:64
+#: single.php:65
 msgid "Previous post"
 msgstr "Предыдущая запись"
 
